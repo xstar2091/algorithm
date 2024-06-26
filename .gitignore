@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+.vs
+AlgorithmCommon/.vs
+AlgorithmCommon/packages
+AlgorithmCommon/x64
+AlgorithmCommon/AlgorithmCommon/x64
