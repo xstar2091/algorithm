@@ -24,11 +24,38 @@ namespace {
     };
 }
 
-TEST(Sort, TestName) {
+TEST(Sort, bubbleSort) {
     for (size_t i = 0; i < unsorted_list.size(); i++) {
         auto actual = unsorted_list[i];
         const auto& expected = expected_list[i];
         Sort::bubbleSort(actual);
+        EXPECT_EQ(actual, expected);
+    }
+}
+
+TEST(Sort, selectionSort) {
+    for (size_t i = 0; i < unsorted_list.size(); i++) {
+        auto actual = unsorted_list[i];
+        const auto& expected = expected_list[i];
+        Sort::selectionSort(actual);
+        EXPECT_EQ(actual, expected);
+    }
+}
+
+TEST(Sort, insertionSort) {
+    for (size_t i = 0; i < unsorted_list.size(); i++) {
+        auto actual = unsorted_list[i];
+        const auto& expected = expected_list[i];
+        Sort::insertionSort(actual);
+        EXPECT_EQ(actual, expected);
+    }
+}
+
+TEST(Sort, quickSort) {
+    for (size_t i = 0; i < unsorted_list.size(); i++) {
+        auto actual = unsorted_list[i];
+        const auto& expected = expected_list[i];
+        Sort::quickSort(actual, 0, static_cast<int>(actual.size()) - 1);
         EXPECT_EQ(actual, expected);
     }
 }
